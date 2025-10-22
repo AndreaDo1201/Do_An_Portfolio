@@ -13,7 +13,7 @@ My portfolio site aims to:
 This portfolio is designed to present my capabilities in both design and development through an engaging, 
 interactive experience. By using modern web technologies—such as HTML5, CSS3, JavaScript, PHP, MySQL, 
 and GSAP—and serves as a dynamic tool to showcase my artistic strengths and creative problem-solving in design. Beyond displaying my best work, 
-it acts as a living record of my evolution as a developer throughout the program, aimed at capturing the attention of potential employers and clients.
+it acts as a living record of my evolution as a designer and front-end throughout the program, aimed at capturing the attention of potential employers and clients.
 
 Objectives
 
