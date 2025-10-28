@@ -1,24 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andrea Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sanchez:ital@0;1&display=swap" rel="stylesheet">    
-</head>
-<body>
+    <link rel="stylesheet" href="css/grid.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sanchez:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <header class="main-header grid-con">
       <h1 class="hidden">Welcome To Andrea is Portfolio</h1>
       <!-- Logo -->
-      <a class="col-span-full col-start-1 col-end-3 m-col-start-3 l-col-start-1 l-col-end-3 header-logo">
-        <img
-          src="images/logo2.0_1-01.png"
-          alt="Orbitz_Logo"
-          class="header-logo"
-        />
-      </a>
+      <div class="col-span-full m-col-span-full l-col-span-full">
+        <div class="header-logo">
+          <img src="images/A_logo.png" alt="A_Logo" />
+        </div>
+        <div class="main-menu grid-con">
+          <div class="hamburger col-start-4 col-end-5">
+            <svg viewBox="0 0 100 80" width="40" height="40">
+              <rect width="100" height="20"></rect>
+              <rect y="30" width="100" height="20"></rect>
+              <rect y="60" width="100" height="20"></rect>
+            </svg>
+          </div>
+          <div class="menu">
+            <nav>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
-</body>
+
+    <main class="grid-con">
+      <section id="hero" class="col-span-full l-col-span-full">
+        <div class="col-span-full l-col-start-4 l-col-end-12">
+          <h2 class="hero-title">PORTFOLIO</h2>
+          <h2 class="hero-title line-text">PORTFOLIO</h2>
+          <h2 class="hero-title line-text">PORTFOLIO</h2>
+          <h2 class="hero-title line-text">PORTFOLIO</h2>
+        </div>
+        <div class="col-span-2 l-col-start-2 l-col-end-6 hero-image">
+          <img src="#" alt="hero-image" />
+        </div>
+      </section>
+      <section id="gallery">
+        <h2>Welcome To My Gallery</h2>
+        <div>
+          <img src="#" alt="projects-1" />
+          <h3>Poject's name</h3>
+        </div>
+      </section>
+      <hr />
+
+      <section id="video">
+        <h2>SHOW REELS</h2>
+        <div class="line-separator"></div>
+        <div class="video-reels">
+          <video controls preload="metadata" poster="images/#">
+            <source src="video/video.mp4" type="video/mp4" />
+            <source src="video/video.webm" type="video/webm" />
+            <p>
+              You are using an older browser that does not support HTML5 Video.
+              Please update your browser.
+            </p>
+          </video>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>FEATURE PROJECTS</h2>
+        <div class="line-separator"></div>
+        <div class="projects-1">
+          <div class="project-images">
+            <img src="#" alt="project-images-1" />
+            <img src="#" alt="project-images-2" />
+            <img src="#" alt="project-images-3" />
+            <img src="#" alt="project-images-4" />
+            <img src="#" alt="project-images-5" />
+          </div>
+          <h3>01</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <hr />
+        <div class="projects-1">
+          <div class="project-images">
+            <img src="#" alt="project-images-1" />
+            <img src="#" alt="project-images-2" />
+            <img src="#" alt="project-images-3" />
+            <img src="#" alt="project-images-4" />
+            <img src="#" alt="project-images-5" />
+          </div>
+          <h3>02</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <hr />
+        <div class="projects-1">
+          <div class="project-images">
+            <img src="#" alt="project-images-1" />
+            <img src="#" alt="project-images-2" />
+            <img src="#" alt="project-images-3" />
+            <img src="#" alt="project-images-4" />
+            <img src="#" alt="project-images-5" />
+          </div>
+          <h3>03</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+        <hr />
+        <button>SEE MORE</button>
+      </section>
+    </main>
+
+    <footer>
+      <img src="#" alt="footer logo" />
+      <nav>
+        <ul>
+          <li><a href="#">Main</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Social Media</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <p>&copy; 2025 An Ngoc Nhu Do</p>
+    </footer>
+  </body>
 </html>
