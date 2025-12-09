@@ -1,0 +1,60 @@
+@use "../abstracts";
+.role-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background: abstracts.$primary-color;
+}
+
+.role , .role-card-2, .role-card-3, .role-card-4 {
+  width: 160px;
+  height: 60px;
+  background: abstracts.$primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;  
+}
+
+.role-card-1 , .role-card-2, .role-card-3, .role-card-4 p {
+  color: abstracts.$bg-color;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.role-container {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    animation: role-container 2s infinite;
+}
+
+@keyframes role-container {
+    0%, 100% {
+        text-shadow: 5px 5px 0 #ff005e, 10px 10px 0 #00d4ff;
+    }
+    50% {
+        text-shadow: -5px -5px 0 #00d4ff, -10px -10px 0 #ff005e;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .role-container {
+    height: 18vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .role-card-1 , .role-card-2, .role-card-3, .role-card-4 {
+    width: 200px;
+    height: 90px;
+  }
+  .role-card-1 , .role-card-2, .role-card-3, .role-card-4 p {
+    font-size: 32px;
+    margin-left: 8rem;
+    padding-right: 14rem;
+  }
+}
+
