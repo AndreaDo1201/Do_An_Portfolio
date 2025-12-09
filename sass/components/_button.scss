@@ -1,0 +1,115 @@
+@use "../abstracts";
+// video button
+#demo-video {
+  .video-controls {
+    background-color: abstracts.$primary-color;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -50px;
+    button {
+      background: transparent;
+      border: none;
+      width: 50px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .video-controls {
+      width: 1000px;
+      margin-left: 37.5rem;
+      button {
+        width: 80px;
+      }
+    }
+  }
+}
+
+// social icons
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social-media {
+  ul {
+    padding: 0;
+    margin-top: 3rem;
+  }
+  ul li {
+    list-style: none;
+    margin: 0 5px;
+  }
+
+  ul li a {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    @media screen and (min-width: 768px) {
+      width: 100px;
+      height: 100px;
+      margin-top: 4rem;
+      font-size: 45px;
+    }
+  }
+
+  ul li a .icon {
+    position: relative;
+    color: #262626;
+    transition: 0.5s;
+    z-index: 3;
+    @media screen and (min-width: 768px) {
+        margin-top: 24px;
+    }
+  }
+
+  ul li a:hover .icon {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+
+  ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 2;
+  }
+
+  ul li a:hover:before {
+    top: 0;
+  }
+
+  ul li:nth-child(1) a:before {
+    background: #1f1f1f;
+  }
+
+  ul li:nth-child(2) a:before {
+    background: #ad1f64;
+  }
+
+  ul li:nth-child(3) a:before {
+    background: #0077b5;
+  }
+
+  ul li:nth-child(4) a:before {
+    background: #ffd000;
+  }
+}

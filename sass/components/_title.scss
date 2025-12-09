@@ -1,0 +1,22 @@
+@use "../abstracts";
+
+.project-head, .video-sec {
+    .project-title {
+        h2 {
+            font-size: 42px;
+            color: abstracts.$primary-color;
+            margin-left: 1rem;
+            margin-top: 3rem;
+            margin-bottom: 10px;
+            word-spacing: 5px;
+            text-align: center;
+        }
+    }
+}
+
+.line-separator {
+    border: none;
+    border-top: 12px solid abstracts.$primary-color;
+    margin: 20px 0;
+
+}

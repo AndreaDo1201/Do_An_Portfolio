@@ -1,0 +1,52 @@
+@use "../abstracts";
+
+#footer-main {
+  background-color: abstracts.$primary-color;
+  .footer-logo img {
+    height: 300px;
+    width: 350px;
+    margin-left: 50px;
+    margin-bottom: -70px;
+  }
+
+  .foot-nav li {
+    font-size: 28px;
+    color: abstracts.$bg-color;
+    padding-top: 10px;
+    list-style: none;
+    text-align: center;
+  }
+
+  p {
+    font-size: 20px;
+    color: abstracts.$bg-color;
+    padding-left: 14rem;
+    margin-top: 40px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  #footer-main{
+    .foot-nav nav ul {   
+          font-size: 26px;
+          display: flex;
+          padding-left: 8rem;
+          gap: 10rem;
+    }
+
+    .footer-logo img {
+          content: url('../../images/a_logo.png');
+          height: 240px;
+          width: auto;
+          margin-left: 28rem;
+          margin-bottom: 0.01rem;
+          margin-top: 0.01rem;
+      }
+
+      p {
+        font-size: 20px; 
+        padding-left: 28rem;
+    }
+  }
+}
