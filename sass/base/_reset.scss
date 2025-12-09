@@ -24,8 +24,9 @@ html {
 }
 
 body {
+    font-family: "Libre Bodoni", serif;
     margin: 0;
-    color: abstracts.$accent-color;
+    color: abstracts.$secondary-color;
     background: abstracts.$bg-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
