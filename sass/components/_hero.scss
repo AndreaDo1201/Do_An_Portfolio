@@ -1,22 +1,19 @@
 @use '../abstracts';
-#hero {
-    background-color: abstracts.$primary-color;
-    height: 22rem;
-    width: 100%;
-    margin-top: 4.2rem;
-    padding-top: 2rem;
+ #hero-header {
+    background-color: abstracts.$bg-color;
+    .hero-image {
+    background-image: url('../../images/header_img.png');
+    height: 25vh;
+    width: auto;
+    margin-top: -20px;
+    background-size: cover;
+    background-position: center;
 
-    .hero-title {
-        color: abstracts.$bg-color;
-        margin-top: -16px;
-        font-size: 2.4em;
-        text-align: center;
+    @media screen and (min-width: 760px) {
+        height: 68vh;
+        width: 100%;
+        margin-top: -5px;
     }
-
-    .line-text{
-        -webkit-text-stroke-color: abstracts.$bg-color;
-        -webkit-text-stroke-width: 1px;
-        color: transparent;
-    }
-}
-
+ }
+ }
+ 
