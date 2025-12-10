@@ -17,9 +17,7 @@
     });
   });
 
-  // =======================================================
-  // 1. DATA (Must be available on all pages using this script)
-  // =======================================================
+ //data info
   const projectsData = {
     1: {
       title: "OJU - A BETTER FRUIT, A BETTER LIFE",
@@ -130,7 +128,7 @@
     },
   };
 
-  // --- Hamburger Menu ---
+  //hamburger
   const mainMenu = document.querySelector(".menu-nav");
   const hamburger = document.querySelector(".hamburger");
 
@@ -146,7 +144,7 @@
     hamburger.addEventListener("click", toggleMenu);
   }
 
-  // --- Lightbox Functions  ---
+  //lightbox click
   const contentLight = document.querySelector("#lightbox-overlay");
   const imagesLight = document.querySelector("#lightbox-image");
 
@@ -159,20 +157,12 @@
     });
   }
 
-  // Function called by image clicks to open lightbox (needs to be implemented wherever images are generated)
-  // const aparecerImagen = (imageSrc) => { /* ... lightbox open logic ... */ };
-
-  // =======================================================
-  // 3. PAGE-SPECIFIC LOGIC (Index vs. Projects page)
-  // =======================================================
-
   const currentPath = window.location.pathname;
 
-  // --- LOGIC FOR THE INDEX.HTML PAGE (Video Player, Project Links) ---
+  // video
   if (currentPath.endsWith("index.html") || currentPath === "/") {
     console.log("Index page logic initializing...");
 
-    // --- Video Player Setup (Assuming elements exist in index.html) ---
     const playerCon = document.querySelector("#player-container");
     const player = document.querySelector("video");
     const videoControls = document.querySelector("#video-controls");
@@ -227,8 +217,7 @@
       player.addEventListener("mouseleave", hideControls);
     }
 
-    // --- Project Link Handling (for navigation to projects.html) ---
-    // We use localStorage here to pass the ID to the next page
+    
     const projectLinks = document.querySelectorAll(
       ".dynamic-load-btn, .project-info"
     );
@@ -238,7 +227,6 @@
         const projectId = this.dataset.projectId;
         if (projectId) {
           localStorage.setItem("selectedProjectId", projectId);
-          // If they clicked the div, prevent default and navigate manually
           if (this.tagName !== "A") {
             e.preventDefault();
             window.location.href = "projects.html";
@@ -248,11 +236,11 @@
     });
   }
 
-  // --- LOGIC FOR THE PROJECTS.HTML PAGE (Dynamic content loading) ---
+  
   else if (currentPath.endsWith("projects.html")) {
     console.log("Projects page logic initializing...");
 
-    // Function to handle the actual DOM injection on the projects page
+   //update projects
     function createProjectDisplay(projectId) {
       const project = projectsData[projectId];
       const projectInfoSection = document.querySelector("#portfolio");
