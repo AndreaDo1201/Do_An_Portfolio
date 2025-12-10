@@ -1,7 +1,6 @@
 @use "../abstracts";
 
 #portfolio {
-  // The JS creates a .content div directly inside #portfolio
   .content {
     width: 90%;
     max-width: 1200px;
@@ -10,7 +9,6 @@
     padding: 60px 0;
   }
 
-  // The .description and p tags are inside .content
   .description {
     text-align: center;
     font-weight: 700;
@@ -23,7 +21,7 @@
     }
   }
 
-  // Target the <p> tag inside .content
+  
   .content p {
     font-size: 18px;
     margin-bottom: 3rem;

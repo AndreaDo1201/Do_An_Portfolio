@@ -1,8 +1,14 @@
 @use '../abstracts';
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 .main-header {
     background-color:abstracts.$primary-color ;
     position: fixed;
     z-index: 999;
+<<<<<<< Updated upstream
     height: 6rem;
     .header-logo {
         width: 20%;
@@ -14,6 +20,33 @@
         .hamburger svg {
             fill: abstracts.$bg-color;
         }
+=======
+    height: 8rem;
+    
+    .header-logo {
+        width: 20%;
+        padding-top: 10px;
+    }
+    
+    .hamburger svg {
+        position: absolute;
+        fill: abstracts.$bg-color; 
+        margin-top: -90px;
+    }
+
+    .menu-nav {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        background-color: #000000;
+        top: 8rem; 
+        left: 0;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+>>>>>>> Stashed changes
 
         .menu {
             display: none;
@@ -22,10 +55,19 @@
 }
 
 @media screen and (min-width: 760px) {
+<<<<<<< Updated upstream
     .menu nav {
             display: flex;
             align-items: center;
             padding-top: 10px;
+=======
+    .main-header {
+        height: auto; 
+
+
+        .hamburger {
+            display: none;
+>>>>>>> Stashed changes
         }
 
         .menu ul {
