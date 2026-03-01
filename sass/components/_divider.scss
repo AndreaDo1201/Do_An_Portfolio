@@ -1,0 +1,41 @@
+@use "../abstracts";
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+  }
+
+  &::before {
+    height: 12px;
+    background-color: abstracts.$primary-color;
+
+    @media screen and (min-width: abstracts.$break-md) {
+      height: 20px;
+    }
+  }
+
+  &::after {
+    height: 6px;
+    background-color: abstracts.$primary-color;
+
+    @media screen and (min-width: abstracts.$break-md) {
+      height: 10px;
+      gap: 10px;
+    }
+  }
+}
+
+.line-separator {
+  border: none;
+  height: 10px;                              
+  background-color: abstracts.$bg-color;   
+  margin: 1rem 0;                          
+}

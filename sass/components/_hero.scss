@@ -1,0 +1,60 @@
+@use "../abstracts";
+#hero {
+  background-color: abstracts.$primary-color;
+  margin-top: 1rem;
+  margin-bottom: 12rem;
+  height: 90vh;
+  padding: 50px;
+  h2 {
+    color: abstracts.$bg-color;
+    font-family: "cornella";
+    font-size: 36px;
+    margin-bottom: 10px;
+    padding-left: 1rem;
+    text-align: center;
+  }
+  p {
+    color: #fff;
+    font-family: "librebodoni";
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .hero-img {
+    position: relative;
+    max-width: 80%;
+    margin-left: 3.5rem;
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    height: 36rem;
+    margin-top: -50px;
+    margin-bottom: 10rem;
+    h2 {
+      font-size: 58px;
+      margin-top: 10px;
+      margin-left: 18rem;
+    }
+    p {
+      font-size: 32px;
+      margin-top: 70px;
+    }
+    .hero-img {
+      max-width: 26%;
+      right: 5rem;
+      top: -640px;
+    }
+  }
+}
+
+.feature-project {
+  display:block; 
+  width:100%; 
+  margin-top:1rem; 
+  margin-bottom:3rem
+}
+@media screen and (min-width: abstracts.$break-md) {
+  .feature-project {
+    margin-top: -120px; 
+  }
+}
