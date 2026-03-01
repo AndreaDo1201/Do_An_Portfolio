@@ -1,8 +1,8 @@
 # The Portfolio of An Ngoc Nhu Do_Graphic-Branding-Motion-Artist-Designer ᝰ✍🏻 .ᐟ
 
 Welcome to my personal portfolio repo,  
-This portfolio shows my skills, projects and work that reflects my passion as a Designer
-Here, you'll find most projects that higlight my abilities in graphic design, responive design, interactive animations and artworks.
+This portfolio shows my skills, projects and work that reflects my passion as a Designer/Artist
+, you'll find most projects that higlight my abilities in graphic design, responive design, interactive animations and artworks.
 
 ![Image of Designer](images/read-me.png)
 
