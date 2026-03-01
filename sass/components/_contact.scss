@@ -1,0 +1,144 @@
+@use "../abstracts";
+
+#contact {
+  background-color: abstracts.$primary-color;
+
+  h2 {
+    font-family: 'cornella';
+    color: abstracts.$bg-color;
+    font-size: 36px;
+    margin-left: 5rem;
+    padding-top: 1.5rem;
+
+    @media screen and (min-width: abstracts.$break-md) {
+      font-size: 90px;
+      margin-left: 22rem;
+      margin-top: 14rem;
+    }
+  }
+
+  .wrapper {
+    margin-right: 0.5rem;
+  }
+}
+
+.form {
+  background: abstracts.$secondary-color;
+  box-shadow: 0 30px 60px 0 abstracts.$third-color;
+  border-radius: 5px;
+  max-width: 700px;
+  margin: 0 auto 5rem 4.5rem;
+  padding: 20px 60px;
+  border-top: 5px solid abstracts.$primary-color;
+  animation: bounce 1.5s infinite;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;        
+
+  @media screen and (min-width: abstracts.$break-md) {
+    width: 700px;
+    padding: 40px 60px;
+    margin-left: 6rem;
+    overflow: visible;     
+  }
+
+  label {
+    font-family: 'cornella';
+    font-size: 16px;
+    color: abstracts.$primary-color;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+}
+
+.formEntry {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+
+  &:focus {
+    outline: 2px solid abstracts.$primary-color;
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    padding: 15px 20px;
+  }
+}
+
+.name,
+.email {
+  background-color: abstracts.$bg-color;
+}
+
+.name {
+  color: abstracts.$primary-color;
+}
+
+.email {
+  height: 2.5rem;
+}
+
+.message {
+  background-color: abstracts.$bg-color;
+  height: 8rem;
+  resize: vertical;
+}
+
+.submit {
+  width: 200px;
+  color: abstracts.$bg-color;
+  background-color: abstracts.$primary-color;
+  font-family: 'cornella';
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  padding: 12px 20px;
+  margin-top: 1.5rem;
+  align-self: center;     
+  transition: width 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px abstracts.$third-color;
+    border-radius: 0%;
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    width: 100%;
+    align-self: stretch;
+    margin-inline: 0;
+    padding: 15px 20px;
+
+    &:hover {
+      width: 100%;       
+    }
+  }
+}
+
+input,
+textarea {
+  &::placeholder {
+    font-size: 16px;
+    font-family: 'librebodoni';
+
+    @media screen and (min-width: abstracts.$break-md) {
+      font-size: 18px;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+}

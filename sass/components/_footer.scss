@@ -1,0 +1,37 @@
+@use "../abstracts";
+
+#footer-main {
+  .footer-logo img {
+    height: 100px;
+    width: 150px;
+    margin-left: 10px;
+    margin-bottom: -70px;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: 'cornella';
+    color: abstracts.$primary-color;
+    padding-left: 9rem;
+    margin-top: 160px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  #footer-main{
+    .footer-logo img {
+          height: 240px;
+          width: auto;
+          margin-bottom: 0.01rem;
+          margin-top: 0.01rem;
+      }
+
+      p {
+        font-size: 30px; 
+        padding-left: 52rem;
+        margin-top: -10px;
+    }
+  }
+}
+

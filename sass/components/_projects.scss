@@ -1,0 +1,101 @@
+@use "../abstracts";
+.photos {
+  column-count: 3;
+}
+
+.photos img {
+  width: 100%;
+  height: auto;
+
+  filter: contrast(100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.photos img:hover {
+  filter: contrast(125%);
+}
+
+#project-case {
+  margin-bottom: 6rem;
+  h2 {
+    font-size: 42px;
+    font-family: "cornella";
+    color: abstracts.$primary-color;
+    margin-left: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .hero-pro {
+    width: 100%;
+    margin-left: 0.1rem;
+  }
+  h3 {
+    font-size: 24px;
+    font-family: "cornella";
+    color: abstracts.$primary-color;
+  }
+  p {
+    font-size: 16px;
+    font-family: "librebodoni";
+    color: abstracts.$third-color;
+  }
+  .photo-icons {
+    margin-left: 8rem;
+  }
+  @media screen and (min-width: abstracts.$break-md) {
+    h2 {
+      font-size: 90px;
+    }
+    h3 {
+      font-size: 40px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 4rem;
+      text-align: center;
+    }
+    p {
+      font-size: 24px;
+    }
+    .photo-icons {
+      position: relative;
+      left: 20rem;
+      img {
+        width: 120px;
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  font-family: "librebodoni";
+  font-size: 18px;
+  color: #896c5e;
+}
+.back-btn-wrap {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+.back-btn-wrap .resume,
+a.resume {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #896c5e, #bfa38b);
+  color: #fff;
+  border-radius: 50px;
+  font-family: "cornella";
+  font-size: 20px;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.back-btn-wrap .resume:hover,
+a.resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(137, 108, 94, 0.4);
+}

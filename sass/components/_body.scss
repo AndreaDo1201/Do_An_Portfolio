@@ -1,0 +1,169 @@
+@use "../abstracts";
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem auto 5rem auto;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: center;
+
+  @media screen and (min-width: abstracts.$break-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.project-1 .project-img,
+.project-1 .project-img-hover {
+  background-image: url("../../images/project_1.png");
+}
+.project-2 .project-img,
+.project-2 .project-img-hover {
+  background-image: url("../../images/project_2.png");
+}
+.project-3 .project-img,
+.project-3 .project-img-hover {
+  background-image: url("../../images/project_3.png");
+}
+.project-4 .project-img,
+.project-4 .project-img-hover {
+  background-image: url("../../images/project_4.png");
+}
+.project-5 .project-img,
+.project-5 .project-img-hover {
+  background-image: url("../../images/project_5.png");
+}
+.project-6 .project-img,
+.project-6 .project-img-hover {
+  background-image: url("../../images/project_6.png");
+}
+.project-7 .project-img,
+.project-7 .project-img-hover {
+  background-image: url("../../images/project_7.png");
+}
+.project-8 .project-img,
+.project-8 .project-img-hover {
+  background-image: url("../../images/project_8.png");
+}
+
+.project {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+
+    .project-img {
+      transform: scale(1.4);
+    }
+
+    .project-img-hover {
+      opacity: 0.65;
+    }
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    width: calc(33.333% - 3rem);
+    margin: 1rem 3rem;
+    margin-left: 0;
+    margin-right: 0;
+    left: 1%;
+  }
+}
+
+.project-img {
+  visibility: visible;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transform: scale(1);
+  transition: transform 0.4s ease-out;
+}
+
+.project-img-hover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  opacity: 0;
+  background-color: #544339;
+  background-image: none !important;
+  transition: opacity 0.4s ease-out;
+}
+
+.project-info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 18px 20px 20px 20px;
+
+  @media screen and (min-width: abstracts.$break-md) {
+    padding: 30px 20px 20px 20px;
+  }
+}
+
+.project-category {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "librebodoni";
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: abstracts.$primary-color;
+}
+
+.project-title {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  font-family: "cornella";
+  font-size: 32px;
+  color: abstracts.$primary-color;
+
+  h2 {
+    margin-left: 2rem;
+  }
+  @media screen and (min-width: abstracts.$break-md) {
+    h2 {
+      font-size: 90px;
+      margin-left: 15rem;
+    }
+  }
+}
+
+.project-role {
+  font-family: "librebodoni";
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: abstracts.$secondary-color;
+}
+
+.project-head {
+  @media screen and (min-width: abstracts.$break-md) {
+    .project-title {
+      margin-top: 2rem;
+      margin-left: 10rem;
+      font-size: 90px;
+    }
+  }
+}

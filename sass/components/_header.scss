@@ -1,0 +1,209 @@
+@use "../abstracts";
+
+#mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  background-color: abstracts.$bg-color;
+  max-height: 0;
+  overflow: hidden;
+  padding-top: 130px;
+  transition: max-height 0.38s ease, box-shadow 0.38s ease;
+
+  &.nav-open {
+    max-height: 440px;
+    box-shadow: 0 8px 32px rgba(84, 67, 57, 0.18);
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    max-height: none;
+    overflow: visible;
+    padding-top: 1rem;
+    box-shadow: none;
+    position: static;
+    background: none;
+  }
+}
+
+
+.main-nav {
+  display: block;
+  background: none;
+  width: 100%;
+
+  .nav-logo {
+    display: none;
+  }
+
+  .menu-nav {
+    list-style: none;
+    font-family: "cornella";
+    font-size: 22px;
+    text-align: center;
+    color: abstracts.$primary-color;
+    width: 100%;
+    padding: 8px 0 24px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+
+    .left-nav,
+    .right-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    li {
+      list-style: none;
+      padding: 10px 0;
+      width: 100%;
+
+      a {
+        font-family: "cornella";
+        font-size: 22px;
+        color: abstracts.$primary-color;
+        display: block;
+        padding: 6px 0;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: abstracts.$third-color;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: abstracts.$break-md) {
+    background: none;
+    top: 0;
+    position: sticky;
+
+    .nav-logo {
+      display: block;
+      width: 400px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    .menu-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 4rem 3rem;
+      margin-top: -90px;
+      gap: 0;
+
+      .left-nav,
+      .right-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        gap: 0.25rem;
+      }
+
+      .left-nav {
+        justify-content: flex-end;
+        padding-right: 3rem;
+      }
+
+      .right-nav {
+        justify-content: flex-start;
+        padding-left: 3rem;
+      }
+
+      li {
+        list-style: none;
+        padding: 0.5rem 1.25rem;
+        text-align: center;
+        white-space: nowrap;
+
+        a {
+          font-family: "cornella";
+          font-size: 40px;
+          font-weight: 700;
+          color: abstracts.$primary-color;
+          text-decoration: none;
+          letter-spacing: 0.03em;
+          transition: opacity 0.2s ease;
+          position: relative;
+          display: inline-block;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 6px;
+          background-color: abstracts.$primary-color;
+          width: 0%;
+          transition: width 0.3s ease;
+        }
+
+        a:hover::after {
+          width: 100%;
+          animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+        }
+
+        @keyframes heartbeat116 {
+          0%, 100% { width: 100%; }
+          50% { width: 60%; }
+        }
+      }
+    }
+  }
+}
+
+
+.header-logo {
+  width: 60%;
+  margin-left: 5.6rem;
+  margin-top: 0.2rem;
+  position: relative;
+  z-index: 1001; 
+
+  @media screen and (min-width: abstracts.$break-md) {
+    display: none;
+  }
+}
+
+
+.hamburger {
+  svg {
+    fill: abstracts.$primary-color;
+  }
+
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+  z-index: 1002;
+  background: abstracts.$bg-color;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: abstracts.$break-md) {
+    display: none;
+  }
+}
