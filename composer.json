@@ -1,0 +1,18 @@
+{
+  "name": "admin/do_an_portfolio_final",
+  "description": "My Design Portfolio",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "DoAnPortfolioFinal\\": "includes/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Andrea An Do"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "*"
+  }
+}
